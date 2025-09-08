@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 40%;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 0 2px black;
+            border-radius: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .container2 {
+            /* width: 40%; */
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 0 2px black;
+            border-radius: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .filhod>p {
+            background-color: lightblue;
+            margin: 5px;
+        }
+
+        .descendente p {
+            background-color: lightgreen;
+            margin: 5px;
+        }
+
+        .irmao-adjacente+p {
+            background-color: lightcoral;
+            margin: 5px;
+        }
+
+        .irmaos~ul {
+            background-color: lightgoldenrodyellow;
+            margin: 5px;
+        }
+
+        .listase div, .listase p {
+            background-color: lightpink;
+            margin: 5px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Combinadores CSS - Exemplos Práticos</h1>
+        <h2>1. Combinador de Filho Direto &gt;</h2>
+        <div class="container2">
+            <div class="filhod">
+                <p>Parágrafo filho direto &lpar;selecionado&rpar;</p>
+                <div>
+                    <p>Paragrafo dentro do span &lpar;não e filho direto&rpar;</p>
+                </div>
+            </div>
+        </div>
+        <h2>2. Combinador de Descendente &lpar;espaço&rpar;</h2>
+        <div class="container2">
+            <div class="descendente">
+                <p>Parágrafo descendente &lpar;selecionado&rpar;</p>
+                <div>
+                    <p>Outro descendente &lpar;também selecionado&rpar;</p>
+                </div>
+            </div>
+        </div>
+        <h2>3. Combinador de Irmão Adjacente &lpar;+&rpar;</h2>
+        <div class="container2">
+            <div class="irmao-adjacente">
+                <p>Elemento DIV</p>
+            </div>
+            <p>Paragrafo logo após a DIV &lpar;selecionado&rpar;</p>
+            <p>Outro paragrafo &lpar;não selecionado&rpar;</p>
+        </div>
+        <h2>4. Combinador de Irmãos Seguintes &lpar;~&rpar;</h2>
+        <div class="container2">
+            <div>
+                <p class="irmaos">Paragrafo antes das listas</p>
+                <ul>
+                    <li>Lista 1</li>
+                </ul>
+                <ul>
+                    <li>Lista 2</li>
+                </ul>
+            </div>
+        </div>
+        <h2>5. Lista de seletores &lpar;,&rpar;</h2>
+        <div class="container2">
+            <div class="listase">
+                <div>DIV selecionada</div>
+                <p>Paragrafo selecionado</p>
+                <span>SPAN não selecionado</span>
+            </div>
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0 auto;
+        }
+
+        input {
+            display: flex;
+            width: 100%;
+            border-radius: 6px;
+            border: 1px solid black;
+            height: 20px;
+            margin-top: 4px;
+            margin-bottom: 4px;
+            }
+
+        select {
+            display: flex;
+            width: 101%;
+            border-radius: 6px;
+            border: 1px solid black;
+            height: 23px;
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+
+        textarea {
+            display: flex;
+            width: 100%;
+            height: 100px;
+            border-radius: 6px;
+            border: 1px solid black;
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+
+        button {
+            width: 100%;
+            background-color: green;
+            color: white;
+            border-radius: 6px;
+            border: 1px solid green;
+            height: 26px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .form {
+            width: 30%;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 0 20px black;
+            border-radius: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .atoat {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .atoat input[type="checkbox"] {
+            width: auto;
+            display: inline;
+        }
+
+        .atoat label {
+            margin: 0;
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <h1>Formulário de Contato</h1>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="email" name="email">
+        <label for="assunto">Assunto:</label>
+        <select name="assunto" id="assunto">
+            <option value="1">Duvida</option>
+            <option value="2">Sugestão</option>
+            <option value="3">Reclamação</option>
+        </select>
+        <label type="text">Mensagem:</label>
+        <textarea name="comment" form="usrform"></textarea>
+        <label type="arquivo">Anexar Arquivo:</label>
+        <input type="file" id="arquivo" name="arquivo">
+        <div class="atoat">
+            <input type="checkbox" id="checkbox" name="checkbox">
+            <label for="checkbox">Aceito os termos e condições</label>
+        </div>
+        <button type="submit">Enviar</button>
+    </div> 
+    <div class="form">
+    <h1>Cadastro de Usuário</h1>
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha">
+        <label for="senha">Confirmar Senha:</label>
+        <input type="password" id="senha" name="senha">
+        <label for="data">Data de Nascimento:</label>
+        <input type="date" id="data" name="data">
+        <label for="genero">Gênero:</label>
+        <select name="genero" id="genero">
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="outro">Outro</option>
+            <option value="nao-binario">Não Binário</option>
+            <option value="prefiro-nao-dizer">Prefiro não dizer</option>
+        </select>
+        <label for="estado">Estado:</label>
+        <input type="text" id="estado" name="estado">
+        <div class="atoat">
+            <input type="checkbox" id="checkbox" name="checkbox">
+            <label for="checkbox">Aceito os termos e condições</label>
+        </div>
+        <button type="submit">Cadastrar</button>
+    </div>
+</body>
+
+</html>

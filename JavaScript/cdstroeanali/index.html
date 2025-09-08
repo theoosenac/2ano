@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Alunos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro e análise de alunos</h1>
+        <button onclick="iniciarCadastro()">Iniciar Cadastro</button>
+        <div id="resultado"></div>
+    
+    <script>
+        function iniciarCadastro() {
+            const resultadoDiv = document.getElementById("resultado");
+            resultadoDiv.innerHTML = ""; // Limpa resultados anteriores
+
+            let qtd = parseInt(prompt("Quantos alunos você deseja cadastrar?"));
+
+            for (let i = 0; i < qtd; i++) {
+                let nome = prompt("Digite o nome do " + (i+1) + "º aluno:");
+                let nota1 = parseFloat(prompt("Digite a primeira nota do " + (i+1) + "º aluno:"));
+                let nota2 = parseFloat(prompt("Digite a segunda nota do " + (i+1) + "º aluno:"));
+
+                if (isNaN(nota1) || isNaN(nota2)) {
+                    alert("Nota inválida. Tente novamente.");
+                    i--; // Decrementa o contador para repetir o cadastro
+                    continue;
+                }
+
+                let media = (nota1 + nota2) / 2;
+                let status = media >= 6 ? "aprovado" : "reprovado";
+                let corClasse = media >= 6 ? "aprovado" : "reprovado";
+
+                resultadoDiv.innerHTML += `
+                    <p><strong>${nome}</strong>, média: ${media.toFixed(2)}</p>
+                    <p class="${corClasse}">${nome} foi ${status}!</p>
+                    <hr>
+                `;
+            }
+            resultadoDiv.innerHTML += "<p>Cadastro finalizado.</p>";
+        }
+    </script>
+    </div>
+</body>
+</html>

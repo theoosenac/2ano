@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de idade e categoria</h1>
+        <p>Ano de nascimento</p>
+        <input type="number" id="anoNasc" placeholder="Digite seu ano de nascimento">
+        <br>
+        <input type="number" id="anoAtual" placeholder="Digite o ano atual">
+        <br>
+        <button onclick="verificarIdade()">Verificar</button>
+        <p id="resultado"></p>
+    </div>
+    <script>
+        function verificarIdade() {
+
+            let anoNasc = document.getElementById("anoNasc").value;
+            let anoAtual = document.getElementById("anoAtual").value;
+            let idade = anoAtual - anoNasc;
+
+            let categoria = "";
+
+            if (idade < 12) {
+                categoria = "Criança";
+            } else if (idade >= 12 && idade <= 17) {
+                categoria = "Adolescente";
+            } else if (idade >= 18 && idade <= 59) {
+                categoria = "Adulto";
+            } else if (idade >= 60) {
+                categoria = "Idoso";
+            }
+
+            document.getElementById("resultado").innerHTML = "Sua idade é " + idade + " e você está na categoria " + categoria;
+        }
+
+    </script>
+</body>
+</html>
