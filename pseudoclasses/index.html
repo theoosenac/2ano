@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .first-child p:first-child {
+            background-color: lightblue;
+            margin: 5px;
+        }
+
+        .first-child i:first-child {
+            background-color: lightblue;
+            margin: 5px;
+        }
+
+        .nth-child p:nth-child(3) {
+            background-color: lightgoldenrodyellow;
+            margin: 5px;
+        }
+
+        .escondido {
+            display: none;
+        }
+
+        a.link:hover+.escondido {
+            display: block;
+        }
+
+        .checked input:checked+label {
+            background-color: lightgreen;
+            margin: 5px;
+        }
+
+        .focus input:focus {
+            background-color: lightyellow;
+            margin: 5px;
+        }
+
+        .ignorar p:not(.ignorado) {
+            background-color: gray;
+            margin: 5px;
+        }
+        .container {
+            text-align: center;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Pseudo-classes</h1>
+        <h2> 1. :hover</h2>
+        <p>Passe o mouse sobre o link abaixo:</p>
+        <a href="#" class="link">Link com :hover</a>
+        <div class="escondido">
+            <p>esta div esta escondida</p>
+        </div>
+
+        <h2>2. :first-child</h2>
+        <div class="first-child">
+            <p>Este é o primeiro paragrafo &lpar;selecionado&rpar;</p>
+            <p>Este é o segundo paragrafo</p>
+            <p>Outro exemplo de <i>primeiro</i><i>filho</i></p>
+        </div>
+
+        <h2>3. :nth-child&lpar;&rpar;</h2>
+        <div class="nth-child">
+            <p>Paragrafo 1</p>
+            <p>Paragrafo 2</p>
+            <p>Paragrafo 3&lpar;selecionado&rpar;</p>
+            <p>Paragrafo 4</p>
+        </div>
+
+        <h2>4. :checked</h2>
+        <div class="checked">
+            <input type="checkbox" id="check1" checked>
+            <label for="check1">Opção 1</label>
+            <input type="checkbox" id="check2">
+            <label for="check2">Opção 2</label>
+        </div>
+
+        <h2>5. :focus</h2>
+        <div class="focus">
+            <p>Clique no campo para ver o :focus em ação:</p>
+            <input type="text" placeholder="Clique aqui" class="focus-input">
+        </div>
+
+        <h2>6. :not&lpar;&rpar;</h2>
+        <div class="ignorar">
+            <p>Este paragrafo sera estilizado com :not&lpar;&rpar;</p>
+            <p class="ignorado">Este paragrafo sera ignorado</p>
+        </div>
+    </div>
+</body>
+
+</html>

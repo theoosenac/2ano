@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 55%;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 0 2px black;
+            border-radius: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .container2 {
+            /* width: 40%; */
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 0 2px black;
+            border-radius: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .linha p::first-line {
+            font-weight: bold;
+            background-color: red;
+        }
+
+        .firlsl p::first-letter {
+            font-size: 2em;
+            color: blue;
+            float: left;
+            margin-right: 5px;
+        }
+
+        .bef p::before {
+            content: "🐉";
+            font-size: 2em;
+            color: red;
+            margin-right: 5px;
+        }
+
+        .af p::after {
+            content: "🩻";
+            font-size: 2em;
+            color: red;
+            margin-left: 5px;
+        }
+
+        .sele p::selection {
+            background-color: black;
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Exemplos de Pseudo-elementos CSS</h1>
+        <div class="linha">
+            <h2>1. p::first-line</h2>
+            <div class="container2">
+                <p>Esta linha ficara com destaque. O restante do paragrafo mantem o estilo padrao.
+                    Voce pode ver a diferença ao redimensionar a janela</p>
+            </div>
+        </div>
+        <div class="firlsl">
+            <h2>2. p::first-letter</h2>
+            <div class="container2">
+                <p>A primeira letra deste paragrafo sera maior e colorida, simulando o estilo de livros antigos ou
+                    revistas</p>
+            </div>
+        </div>
+        <div class="bef">
+            <h2>3. p::before</h2>
+            <div class="container2">
+                <p>Este paragrafo possui um simbolo adicionado antes do seu conteudo com ::before</p>
+            </div>
+        </div>
+        <div class="af">
+            <h2>4. p::after</h2>
+            <div class="container2">
+                <p>Este paragrafo adiciona um icone no final usando ::after</p>
+            </div>
+        </div>
+        <div class="sele">
+            <h2>5. p::selection</h2>
+            <div class="container2">
+                <p>Selecione este texto com o mouse para ver o efeito do Pseudo-elemento ::selection</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

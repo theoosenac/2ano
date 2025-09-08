@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Periódica</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        td {
+            border: 1px solid #000;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 12px;
+            padding: 2px;
+            transform: transform 0.2s ease-in-out;
+            position: relative;
+            min-width: 60px;
+        }
+
+        td:hover {
+            transform: scale(1.2);
+            z-index: 1;
+        }
+
+        .element {
+            background-color: #f0f0f0;
+            cursor: pointer;
+    
+        }
+
+        .metal {
+            background-color: #ff9999;
+        }
+
+        .semi-metal {
+            background-color: #ffcc99;
+        }
+
+        .nmetal {
+            background-color: #99ff99;
+        }
+
+        .gasnobres {
+            background-color: #99ffff;
+        }
+
+        .alcalino {
+            background-color: #ff6666;
+        }
+
+        .alcalinoter {
+            background-color: #ffdead;
+        }
+
+        .transicao {
+            background-color: #ffb6c1;
+        }
+
+        .lantanideos {
+            background-color: #ffbfff;
+        }
+
+        .actinideos {
+            background-color: #ff99cc;
+        }
+
+        .halo {
+            background-color: #5ed2be;
+        }
+
+        .nada {
+            border: none;
+        }
+
+        .legend {
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .legend-item {
+            display: inline-block;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow: auto;
+        }
+
+        .natomico {
+            font-size: 12px;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .massa {
+            font-size: 10px;
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            text-align: right;
+        }
+
+        .simbolo {
+            font-size: 16px;
+        }
+
+        .nome {
+            font-size: 8px;
+            position: absolute;
+            bottom: 5px;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Tabela Periódica dos Elementos</h1>
+
+    <div class="legend" style="text-align: center;">
+        <span class="legend-item alcalino">Metais Alcalinos</span>
+        <span class="legend-item alcalinoter">Metais Alcalino-Terrosos</span>
+        <span class="legend-item transicao">Metais de Transição</span>
+        <span class="legend-item lantanideos">Lantanídeos</span>
+        <span class="legend-item actinideos">Actinídeos</span>
+        <span class="legend-item metal">Outros Metais</span>
+        <span class="legend-item semi-metal">Semimetais</span>
+        <span class="legend-item nmetal">Não Metais</span>
+        <span class="legend-item gasnobres">Gases Nobres</span>
+        <span class="legend-item halo">Halogenios</span>
+    </div>
+
+    <table>
+        <tr>
+            <td class="element nmetal" onclick="window.open('https://pt.wikipedia.org/wiki/Hidrog%C3%AAnio', '_blank')">
+                <div class="natomico">1</div>
+                <div class="massa">1.008</div>
+                <div class="simbolo">H</div>
+                <div class="nome">Hidrogênio</div>
+            </td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="element gasnobres" onclick="window.open('https://pt.wikipedia.org/wiki/H%C3%A9lio', '_blank')">
+                <div class="natomico">2</div>
+                <div class="massa">4.0026</div>
+                <div class="simbolo">He</div>
+                <div class="nome">Hélio</div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="element alcalino" onclick="window.open('https://pt.wikipedia.org/wiki/L%C3%ADtio', '_blank')">
+                <div class="natomico">3</div>
+                <div class="massa">6.94</div>
+                <div class="simbolo">Li</div>
+                <div class="nome">Lítio</div>
+            </td>
+            <td class="element alcalinoter"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Ber%C3%ADlio', '_blank')">
+                <div class="natomico">4</div>
+                <div class="massa">9.0122</div>
+                <div class="simbolo">Be</div>
+                <div class="nome">Berílio</div>
+            </td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="element semi-metal" onclick="window.open('https://pt.wikipedia.org/wiki/Boro', '_blank')">
+                <div class="natomico">5</div>
+                <div class="massa">10.81</div>
+                <div class="simbolo">B</div>
+                <div class="nome">Boro</div>
+            </td>
+            <td class="element nmetal" onclick="window.open('https://pt.wikipedia.org/wiki/Carbono', '_blank')">
+                <div class="natomico">6</div>
+                <div class="massa">12.011</div>
+                <div class="simbolo">C</div>
+                <div class="nome">Carbono</div>
+            </td>
+            <td class="element nmetal" onclick="window.open('https://pt.wikipedia.org/wiki/Nitrog%C3%AAnio', '_blank')">
+                <div class="natomico">7</div>
+                <div class="massa">14.007</div>
+                <div class="simbolo">N</div>
+                <div class="nome">Nitrogênio</div>
+            </td>
+            <td class="element nmetal" onclick="window.open('https://pt.wikipedia.org/wiki/Oxig%C3%AAnio', '_blank')">
+                <div class="natomico">8</div>
+                <div class="massa">15.999</div>
+                <div class="simbolo">O</div>
+                <div class="nome">Oxigênio</div>
+            </td>
+            <td class="element halo" onclick="window.open('https://pt.wikipedia.org/wiki/Fl%C3%BAor', '_blank')">
+                <div class="natomico">9</div>
+                <div class="massa">18.998</div>
+                <div class="simbolo">F</div>
+                <div class="nome">Flúor</div>
+            </td>
+            <td class="element gasnobres" onclick="window.open('https://pt.wikipedia.org/wiki/Ne%C3%B3nio', '_blank')">
+                <div class="natomico">10</div>
+                <div class="massa">20.180</div>
+                <div class="simbolo">Ne</div>
+                <div class="nome">Neônio</div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="element alcalino" onclick="window.open('https://pt.wikipedia.org/wiki/S%C3%B3dio', '_blank')">
+                <div class="natomico">11</div>
+                <div class="massa">22.990</div>
+                <div class="simbolo">Na</div>
+                <div class="nome">Sódio</div>
+            </td>
+            <td class="element alcalinoter"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Magn%C3%A9sio', '_blank')">
+                <div class="natomico">12</div>
+                <div class="massa">24.305</div>
+                <div class="simbolo">Mg</div>
+                <div class="nome">Magnésio</div>
+            </td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="nada"></td>
+            <td class="element metal" onclick="window.open('https://pt.wikipedia.org/wiki/Alum%C3%ADnio', '_blank')">
+                <div class="natomico">13</div>
+                <div class="massa">26.982</div>
+                <div class="simbolo">Al</div>
+                <div class="nome">Alumínio</div>
+            </td>
+            <td class="element semi-metal"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Sil%C3%ADcio', '_blank')">
+                <div class="natomico">14</div>
+                <div class="massa">28.085</div>
+                <div class="simbolo">Si</div>
+                <div class="nome">Silício</div>
+            </td>
+            <td class="element nmetal" onclick="window.open('https://pt.wikipedia.org/wiki/F%C3%B3sforo', '_blank')">
+                <div class="natomico">15</div>
+                <div class="massa">30.974</div>
+                <div class="simbolo">P</div>
+                <div class="nome">Fósforo</div>
+            </td>
+            <td class="element nmetal" onclick="window.open('https://pt.wikipedia.org/wiki/Enxofre', '_blank')">
+                <div class="natomico">16</div>
+                <div class="massa">32.06</div>
+                <div class="simbolo">S</div>
+                <div class="nome">Enxofre</div>
+            </td>
+            <td class="element halo" onclick="window.open('https://pt.wikipedia.org/wiki/Cloro', '_blank')">
+                <div class="natomico">17</div>
+                <div class="massa">35.45</div>
+                <div class="simbolo">Cl</div>
+                <div class="nome">Cloro</div>
+            </td>
+            <td class="element gasnobres" onclick="window.open('https://pt.wikipedia.org/wiki/Arg%C3%B4nio', '_blank')">
+                <div class="natomico">18</div>
+                <div class="massa">39.948</div>
+                <div class="simbolo">Ar</div>
+                <div class="nome">Argônio</div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="element alcalino" onclick="window.open('https://pt.wikipedia.org/wiki/Pot%C3%A1ssio', '_blank')">
+                <div class="natomico">19</div>
+                <div class="massa">39.098</div>
+                <div class="simbolo">K</div>
+                <div class="nome">Potássio</div>
+            </td>
+            <td class="element alcalinoter"
+                onclick="window.open('https://pt.wikipedia.org/wiki/C%C3%A1lcio', '_blank')">
+                <div class="natomico">20</div>
+                <div class="massa">40.078</div>
+                <div class="simbolo">Ca</div>
+                <div class="nome">Cálcio</div>
+            </td>
+            <td class="element transicao"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Esc%C3%A2ndio', '_blank')">
+                <div class="natomico">21</div>
+                <div class="massa">44.956</div>
+                <div class="simbolo">Sc</div>
+                <div class="nome">Escândio</div>
+            </td>
+            <td class="element transicao" onclick="window.open('https://pt.wikipedia.org/wiki/Tit%C3%A2nio', '_blank')">
+                <div class="natomico">22</div>
+                <div class="massa">47.867</div>
+                <div class="simbolo">Ti</div>
+                <div class="nome">Titânio</div>
+            </td>
+            <td class="element transicao" onclick="window.open('https://pt.wikipedia.org/wiki/Van%C3%A1dio', '_blank')">
+                <div class="natomico">23</div>
+                <div class="massa">50.942</div>
+                <div class="simbolo">V</div>
+                <div class="nome">Vanádio</div>
+            </td>
+            <td class="element transicao" onclick="window.open('https://pt.wikipedia.org/wiki/Cromo', '_blank')">
+                <div class="natomico">24</div>
+                <div class="massa">51.996</div>
+                <div class="simbolo">Cr</div>
+                <div class="nome">Cromo</div>
+            </td>
+            <td class="element transicao"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Mangan%C3%AAs', '_blank')">
+                <div class="natomico">25</div>
+                <div class="massa">54.938</div>
+                <div class="simbolo">Mn</div>
+                <div class="nome">Manganês</div>
+            </td>
+            <td class="element transicao" onclick="window.open('https://pt.wikipedia.org/wiki/Ferro', '_blank')">
+                <div class="natomico">26</div>
+                <div class="massa">55.845</div>
+                <div class="simbolo">Fe</div>
+                <div class="nome">Ferro</div>
+            </td>
+            <td class="element transicao" onclick="window.open('https://pt.wikipedia.org/wiki/Cobalto', '_blank')">
+                <div class="natomico">27</div>
+                <div class="massa">58.933</div>
+                <div class="simbolo">Co</div>
+                <div class="nome">Cobalto</div>
+            </td>
+            <td class="element transicao" onclick="window.open('https://pt.wikipedia.org/wiki/N%C3%ADquel', '_blank')">
+                <div class="natomico">28</div>
+                <div class="massa">58.693</div>
+                <div class="simbolo">Ni</div>
+                <div class="nome">Níquel</div>
+            </td>
+            <td class="element transicao" onclick="window.open('https://pt.wikipedia.org/wiki/Cobre', '_blank')">
+                <div class="natomico">29</div>
+                <div class="massa">63.546</div>
+                <div class="simbolo">Cu</div>
+                <div class="nome">Cobre</div>
+            </td>
+            <td class="element transicao" onclick="window.open('https://pt.wikipedia.org/wiki/Zinco', '_blank')">
+                <div class="natomico">30</div>
+                <div class="massa">65.38</div>
+                <div class="simbolo">Zn</div>
+                <div class="nome">Zinco</div>
+            </td>
+            <td class="element metal" onclick="window.open('https://pt.wikipedia.org/wiki/G%C3%A1lio', '_blank')">
+                <div class="natomico">31</div>
+                <div class="massa">69.723</div>
+                <div class="simbolo">Ga</div>
+                <div class="nome">Gálio</div>
+            </td>
+            <td class="element semi-metal"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Germ%C3%A2nio', '_blank')">
+                <div class="natomico">32</div>
+                <div class="massa">72.630</div>
+                <div class="simbolo">Ge</div>
+                <div class="nome">Germânio</div>
+            </td>
+            <td class="element semi-metal"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Ars%C3%AAnio', '_blank')">
+                <div class="natomico">33</div>
+                <div class="massa">74.922</div>
+                <div class="simbolo">As</div>
+                <div class="nome">Arsênio</div>
+            </td>
+            <td class="element nmetal" onclick="window.open('https://pt.wikipedia.org/wiki/Sel%C3%AAnio', '_blank')">
+                <div class="natomico">34</div>
+                <div class="massa">78.971</div>
+                <div class="simbolo">Se</div>
+                <div class="nome">Selênio</div>
+            </td>
+            <td class="element halo" onclick="window.open('https://pt.wikipedia.org/wiki/Bromo', '_blank')">
+                <div class="natomico">35</div>
+                <div class="massa">79.904</div>
+                <div class="simbolo">Br</div>
+                <div class="nome">Bromo</div>
+            </td>
+            <td class="element gasnobres"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Cript%C3%B4nio', '_blank')">
+                <div class="natomico">36</div>
+                <div class="massa">83.798</div>
+                <div class="simbolo">Kr</div>
+                <div class="nome">Criptônio</div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="element alcalino" onclick="window.open('https://pt.wikipedia.org/wiki/Rub%C3%ADdio', '_blank')">
+                <div class="natomico">37</div>
+                <div class="massa">85.468</div>
+                <div class="simbolo">Rb</div>
+                <div class="nome">Rubídio</div>
+            </td>
+            <td class="element alcalinoter"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Est%C3%A2ncio', '_blank')">
+                <div class="natomico">38</div>
+                <div class="massa">87.62</div>
+                <div class="simbolo">Sr</div>
+                <div class="nome">Estrôncio</div>
+            </td>
+            <td class="element transicao" onclick="window.open('https://pt.wikipedia.org/wiki/%C3%8Dtrio', '_blank')">
+                <div class="natomico">39</div>
+                <div class="massa">88.906</div>
+                <div class="simbolo">Y</div>
+                <div class="nome">Ítrio</div>
+            </td>
+            <td class="element transicao"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Zirc%C3%B4nio', '_blank')">
+                <div class="natomico">40</div>
+                <div class="massa">91.224</div>
+                <div class="simbolo">Zr</div>
+                <div class="nome">Zircônio</div>
+            </td>
+            <td class="element transicao" onclick="window.open('https://pt.wikipedia.org/wiki/Ni%C3%B3bio', '_blank')">
+                <div class="natomico">41</div>
+                <div class="massa">92.906</div>
+                <div class="simbolo">Nb</div>
+                <div class="nome">Nióbio</div>
+            </td>
+            <td class="element transicao"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Molibd%C3%AAnio', '_blank')">
+                <div class="natomico">42</div>
+                <div class="massa">95.95</div>
+                <div class="simbolo">Mo</div>
+                <div class="nome">Molibdênio</div>
+            </td>
+            <td class="element transicao"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Tecn%C3%A9cio', '_blank')">
+                <div class="natomico">43</div>
+                <div class="massa">[98]</div>
+                <div class="simbolo">Tc</div>
+                <div class="nome">Tecnécio</div>
+            </td>
+            <td class="element transicao" onclick="window.open('https://pt.wikipedia.org/wiki/Rut%C3%AAnio', '_blank')">
+                <div class="natomico">44</div>
+                <div class="massa">101.07</div>
+                <div class="simbolo">Ru</div>
+                <div class="nome">Rutênio</div>
+            </td>
+            <td class="element transicao" onclick="window.open('https://pt.wikipedia.org/wiki/R%C3%B3dio', '_blank')">
+                <div class="natomico">45</div>
+                <div class="massa">102.91</div>
+                <div class="simbolo">Rh</div>
+                <div class="nome">Ródio</div>
+            </td>
+            <td class="element transicao" onclick="window.open('https://pt.wikipedia.org/wiki/Pal%C3%A1dio', '_blank')">
+                <div class="natomico">46</div>
+                <div class="massa">106.42</div>
+                <div class="simbolo">Pd</div>
+                <div class="nome">Paládio</div>
+            </td>
+            <td class="element transicao" onclick="window.open('https://pt.wikipedia.org/wiki/Prata', '_blank')">
+                <div class="natomico">47</div>
+                <div class="massa">107.87</div>
+                <div class="simbolo">Ag</div>
+                <div class="nome">Prata</div>
+            </td>
+            <td class="element transicao" onclick="window.open('https://pt.wikipedia.org/wiki/C%C3%A1dmio', '_blank')">
+                <div class="natomico">48</div>
+                <div class="massa">112.41</div>
+                <div class="simbolo">Cd</div>
+                <div class="nome">Cádmio</div>
+            </td>
+            <td class="element metal" onclick="window.open('https://pt.wikipedia.org/wiki/%C3%8Dndio', '_blank')">
+                <div class="natomico">49</div>
+                <div class="massa">114.82</div>
+                <div class="simbolo">In</div>
+                <div class="nome">Índio</div>
+            </td>
+            <td class="element metal" onclick="window.open('https://pt.wikipedia.org/wiki/Estanho', '_blank')">
+                <div class="natomico">50</div>
+                <div class="massa">118.71</div>
+                <div class="simbolo">Sn</div>
+                <div class="nome">Estanho</div>
+            </td>
+            <td class="element semi-metal"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Antim%C3%B4nio', '_blank')">
+                <div class="natomico">51</div>
+                <div class="massa">121.76</div>
+                <div class="simbolo">Sb</div>
+                <div class="nome">Antimônio</div>
+            </td>
+            <td class="element semi-metal"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Tel%C3%BArio', '_blank')">
+                <div class="natomico">52</div>
+                <div class="massa">127.60</div>
+                <div class="simbolo">Te</div>
+                <div class="nome">Telúrio</div>
+            </td>
+            <td class="element halo" onclick="window.open('https://pt.wikipedia.org/wiki/Iodo', '_blank')">
+                <div class="natomico">53</div>
+                <div class="massa">126.90</div>
+                <div class="simbolo">I</div>
+                <div class="nome">Iodo</div>
+            </td>
+            <td class="element gasnobres" onclick="window.open('https://pt.wikipedia.org/wiki/Xen%C3%B3nio', '_blank')">
+                <div class="natomico">54</div>
+                <div class="massa">131.29</div>
+                <div class="simbolo">Xe</div>
+                <div class="nome">Xenônio</div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="element alcalino" onclick="window.open('https://pt.wikipedia.org/wiki/C%C3%A9sio', '_blank')">
+                <div class="natomico">55</div>
+                <div class="massa">132.91</div>
+                <div class="simbolo">Cs</div>
+                <div class="nome">Césio</div>
+            </td>
+            <td class="element alcalinoter" onclick="window.open('https://pt.wikipedia.org/wiki/B%C3%A1rio', '_blank')">
+                <div class="natomico">56</div>
+                <div class="massa">137.33</div>
+                <div class="simbolo">Ba</div>
+                <div class="nome">Bário</div>
+            </td>
+            <td class="element lantanideos"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Lant%C3%A2nio', '_blank')">
+                <div class="natomico">57</div>
+                <div class="massa">138.91</div>
+                <div class="simbolo">La</div>
+                <div class="nome">Lantânio</div>
+            </td>
+            <td class="element transicao" onclick="window.open('https://pt.wikipedia.org/wiki/H%C3%A1fnio', '_blank')">
+                <div class="natomico">72</div>
+                <div class="massa">178.49</div>
+                <div class="simbolo">Hf</div>
+                <div class="nome">Háfnio</div>
+            </td>
+            <td class="element transicao"
+                onclick="window.open('https://pt.wikipedia.org/wiki/T%C3%A2ntalo_(elemento_qu%C3%ADmico)', '_blank')">
+                <div class="natomico">73</div>
+                <div class="massa">180.95</div>
+                <div class="simbolo">Ta</div>
+                <div class="nome">Tântalo</div>
+            </td>
+            <td class="element transicao"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Tungst%C3%AAnio', '_blank')">
+                <div class="natomico">74</div>
+                <div class="massa">183.84</div>
+                <div class="simbolo">W</div>
+                <div class="nome">Tungstênio</div>
+            </td>
+            <td class="element transicao" onclick="window.open('https://pt.wikipedia.org/wiki/R%C3%AAnio', '_blank')">
+                <div class="natomico">75</div>
+                <div class="massa">186.21</div>
+                <div class="simbolo">Re</div>
+                <div class="nome">Rênio</div>
+            </td>
+            <td class="element transicao" onclick="window.open('https://pt.wikipedia.org/wiki/%C3%93smio', '_blank')">
+                <div class="natomico">76</div>
+                <div class="massa">190.23</div>
+                <div class="simbolo">Os</div>
+                <div class="nome">Ósmio</div>
+            </td>
+            <td class="element transicao" onclick="window.open('https://pt.wikipedia.org/wiki/Ir%C3%ADdio', '_blank')">
+                <div class="natomico">77</div>
+                <div class="massa">192.22</div>
+                <div class="simbolo">Ir</div>
+                <div class="nome">Irídio</div>
+            </td>
+            <td class="element transicao" onclick="window.open('https://pt.wikipedia.org/wiki/Platina', '_blank')">
+                <div class="natomico">78</div>
+                <div class="massa">195.08</div>
+                <div class="simbolo">Pt</div>
+                <div class="nome">Platina</div>
+            </td>
+            <td class="element transicao" onclick="window.open('https://pt.wikipedia.org/wiki/Ouro', '_blank')">
+                <div class="natomico">79</div>
+                <div class="massa">196.97</div>
+                <div class="simbolo">Au</div>
+                <div class="nome">Ouro</div>
+            </td>
+            <td class="element transicao"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Merc%C3%BArio_(elemento_qu%C3%ADmico)', '_blank')">
+                <div class="natomico">80</div>
+                <div class="massa">200.59</div>
+                <div class="simbolo">Hg</div>
+                <div class="nome">Mercúrio</div>
+            </td>
+            <td class="element metal" onclick="window.open('https://pt.wikipedia.org/wiki/T%C3%A1lio', '_blank')">
+                <div class="natomico">81</div>
+                <div class="massa">204.38</div>
+                <div class="simbolo">Tl</div>
+                <div class="nome">Tálio</div>
+            </td>
+            <td class="element metal" onclick="window.open('https://pt.wikipedia.org/wiki/Chumbo', '_blank')">
+                <div class="natomico">82</div>
+                <div class="massa">207.2</div>
+                <div class="simbolo">Pb</div>
+                <div class="nome">Chumbo</div>
+            </td>
+            <td class="element metal" onclick="window.open('https://pt.wikipedia.org/wiki/Bismuto', '_blank')">
+                <div class="natomico">83</div>
+                <div class="massa">208.98</div>
+                <div class="simbolo">Bi</div>
+                <div class="nome">Bismuto</div>
+            </td>
+            <td class="element semi-metal"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Pol%C3%B4nio', '_blank')">
+                <div class="natomico">84</div>
+                <div class="massa">[209]</div>
+                <div class="simbolo">Po</div>
+                <div class="nome">Polônio</div>
+            </td>
+            <td class="element halo" onclick="window.open('https://pt.wikipedia.org/wiki/Astato', '_blank')">
+                <div class="natomico">85</div>
+                <div class="massa">[210]</div>
+                <div class="simbolo">At</div>
+                <div class="nome">Astato</div>
+            </td>
+            <td class="element gasnobres" onclick="window.open('https://pt.wikipedia.org/wiki/Rad%C3%B3nio', '_blank')">
+                <div class="natomico">86</div>
+                <div class="massa">[222]</div>
+                <div class="simbolo">Rn</div>
+                <div class="nome">Radônio</div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="element alcalino" onclick="window.open('https://pt.wikipedia.org/wiki/Fr%C3%A2ncio', '_blank')">
+                <div class="natomico">87</div>
+                <div class="massa">[223]</div>
+                <div class="simbolo">Fr</div>
+                <div class="nome">Frâncio</div>
+            </td>
+            <td class="element alcalinoter" onclick="window.open('https://pt.wikipedia.org/wiki/R%C3%A1dio', '_blank')">
+                <div class="natomico">88</div>
+                <div class="massa">[226]</div>
+                <div class="simbolo">Ra</div>
+                <div class="nome">Rádio</div>
+            </td>
+            <td class="element actinideos"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Act%C3%ADnio', '_blank')">
+                <div class="natomico">89</div>
+                <div class="massa">[227]</div>
+                <div class="simbolo">Ac</div>
+                <div class="nome">Actínio</div>
+            </td>
+            <td class="element transicao"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Rutherf%C3%B3rdio', '_blank')">
+                <div class="natomico">104</div>
+                <div class="massa">[267]</div>
+                <div class="simbolo">Rf</div>
+                <div class="nome">Rutherfórdio</div>
+            </td>
+            <td class="element transicao" onclick="window.open('https://pt.wikipedia.org/wiki/D%C3%BAnio', '_blank')">
+                <div class="natomico">105</div>
+                <div class="massa">[268]</div>
+                <div class="simbolo">Db</div>
+                <div class="nome">Dúbnio</div>
+            </td>
+            <td class="element transicao"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Seab%C3%B3rgio', '_blank')">
+                <div class="natomico">106</div>
+                <div class="massa">[269]</div>
+                <div class="simbolo">Sg</div>
+                <div class="nome">Seabórgio</div>
+            </td>
+            <td class="element transicao" onclick="window.open('https://pt.wikipedia.org/wiki/B%C3%B3hrio', '_blank')">
+                <div class="natomico">107</div>
+                <div class="massa">[270]</div>
+                <div class="simbolo">Bh</div>
+                <div class="nome">Bóhrio</div>
+            </td>
+            <td class="element transicao" onclick="window.open('https://pt.wikipedia.org/wiki/H%C3%A1ssio', '_blank')">
+                <div class="natomico">108</div>
+                <div class="massa">[269]</div>
+                <div class="simbolo">Hs</div>
+                <div class="nome">Hássio</div>
+            </td>
+            <td class="element transicao"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Meitn%C3%A9rio', '_blank')">
+                <div class="natomico">109</div>
+                <div class="massa">[278]</div>
+                <div class="simbolo">Mt</div>
+                <div class="nome">Meitnério</div>
+            </td>
+            <td class="element transicao"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Darmst%C3%A1dio', '_blank')">
+                <div class="natomico">110</div>
+                <div class="massa">[281]</div>
+                <div class="simbolo">Ds</div>
+                <div class="nome">Darmstádio</div>
+            </td>
+            <td class="element transicao"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Roentg%C3%A9nio', '_blank')">
+                <div class="natomico">111</div>
+                <div class="massa">[282]</div>
+                <div class="simbolo">Rg</div>
+                <div class="nome">Roentgênio</div>
+            </td>
+            <td class="element transicao"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Copern%C3%ADcio', '_blank')">
+                <div class="natomico">112</div>
+                <div class="massa">[285]</div>
+                <div class="simbolo">Cn</div>
+                <div class="nome">Copernício</div>
+            </td>
+            <td class="element metal" onclick="window.open('https://pt.wikipedia.org/wiki/Nih%C3%B4nio', '_blank')">
+                <div class="natomico">113</div>
+                <div class="massa">[286]</div>
+                <div class="simbolo">Nh</div>
+                <div class="nome">Nihônio</div>
+            </td>
+            <td class="element metal" onclick="window.open('https://pt.wikipedia.org/wiki/Fler%C3%B3vio', '_blank')">
+                <div class="natomico">114</div>
+                <div class="massa">[289]</div>
+                <div class="simbolo">Fl</div>
+                <div class="nome">Fleróvio</div>
+            </td>
+            <td class="element metal" onclick="window.open('https://pt.wikipedia.org/wiki/Mosc%C3%B3vio', '_blank')">
+                <div class="natomico">115</div>
+                <div class="massa">[290]</div>
+                <div class="simbolo">Mc</div>
+                <div class="nome">Moscóvio</div>
+            </td>
+            <td class="element metal" onclick="window.open('https://pt.wikipedia.org/wiki/Liverm%C3%B3rio', '_blank')">
+                <div class="natomico">116</div>
+                <div class="massa">[293]</div>
+                <div class="simbolo">Lv</div>
+                <div class="nome">Livermório</div>
+            </td>
+            <td class="element halo" onclick="window.open('https://pt.wikipedia.org/wiki/Tenesso', '_blank')">
+                <div class="natomico">117</div>
+                <div class="massa">[294]</div>
+                <div class="simbolo">Ts</div>
+                <div class="nome">Tenesso</div>
+            </td>
+            <td class="element gasnobres"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Oganess%C3%B4nio', '_blank')">
+                <div class="natomico">118</div>
+                <div class="massa">[294]</div>
+                <div class="simbolo">Og</div>
+                <div class="nome">Oganessônio</div>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="18" style="text-align: center; border: none; height: 30px;">
+                <div class="natomico">Lantanídeos</div>
+            </td>
+        </tr>
+        <tr>
+            <td class="element lantanideos" onclick="window.open('https://pt.wikipedia.org/wiki/C%C3%A9rio', '_blank')">
+                <div class="natomico">58</div>
+                <div class="massa">140.12</div>
+                <div class="simbolo">Ce</div>
+                <div class="nome">Cério</div>
+            </td>
+            <td class="element lantanideos"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Praseod%C3%ADmio', '_blank')">
+                <div class="natomico">59</div>
+                <div class="massa">140.91</div>
+                <div class="simbolo">Pr</div>
+                <div class="nome">Praseodímio</div>
+            </td>
+            <td class="element lantanideos"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Neod%C3%ADmio', '_blank')">
+                <div class="natomico">60</div>
+                <div class="massa">144.24</div>
+                <div class="simbolo">Nd</div>
+                <div class="nome">Neodímio</div>
+            </td>
+            <td class="element lantanideos"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Prom%C3%A9cio', '_blank')">
+                <div class="natomico">61</div>
+                <div class="massa">[145]</div>
+                <div class="simbolo">Pm</div>
+                <div class="nome">Promécio</div>
+            </td>
+            <td class="element lantanideos"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Sam%C3%A1rio', '_blank')">
+                <div class="natomico">62</div>
+                <div class="massa">150.36</div>
+                <div class="simbolo">Sm</div>
+                <div class="nome">Samário</div>
+            </td>
+            <td class="element lantanideos"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Eur%C3%B3pio', '_blank')">
+                <div class="natomico">63</div>
+                <div class="massa">151.96</div>
+                <div class="simbolo">Eu</div>
+                <div class="nome">Európio</div>
+            </td>
+            <td class="element lantanideos"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Gadol%C3%ADnio', '_blank')">
+                <div class="natomico">64</div>
+                <div class="massa">157.25</div>
+                <div class="simbolo">Gd</div>
+                <div class="nome">Gadolínio</div>
+            </td>
+            <td class="element lantanideos"
+                onclick="window.open('https://pt.wikipedia.org/wiki/T%C3%A9rbio', '_blank')">
+                <div class="natomico">65</div>
+                <div class="massa">158.93</div>
+                <div class="simbolo">Tb</div>
+                <div class="nome">Térbio</div>
+            </td>
+            <td class="element lantanideos"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Dispr%C3%B3sio', '_blank')">
+                <div class="natomico">66</div>
+                <div class="massa">162.50</div>
+                <div class="simbolo">Dy</div>
+                <div class="nome">Disprósio</div>
+            </td>
+            <td class="element lantanideos"
+                onclick="window.open('https://pt.wikipedia.org/wiki/H%C3%B3lmio', '_blank')">
+                <div class="natomico">67</div>
+                <div class="massa">164.93</div>
+                <div class="simbolo">Ho</div>
+                <div class="nome">Hólmio</div>
+            </td>
+            <td class="element lantanideos" onclick="window.open('https://pt.wikipedia.org/wiki/%C3%89rbio', '_blank')">
+                <div class="natomico">68</div>
+                <div class="massa">167.26</div>
+                <div class="simbolo">Er</div>
+                <div class="nome">Érbio</div>
+            </td>
+            <td class="element lantanideos" onclick="window.open('https://pt.wikipedia.org/wiki/T%C3%BAlio', '_blank')">
+                <div class="natomico">69</div>
+                <div class="massa">168.93</div>
+                <div class="simbolo">Tm</div>
+                <div class="nome">Túlio</div>
+            </td>
+            <td class="element lantanideos"
+                onclick="window.open('https://pt.wikipedia.org/wiki/It%C3%A9rbio', '_blank')">
+                <div class="natomico">70</div>
+                <div class="massa">173.05</div>
+                <div class="simbolo">Yb</div>
+                <div class="nome">Itérbio</div>
+            </td>
+            <td class="element lantanideos"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Lut%C3%A9cio', '_blank')">
+                <div class="natomico">71</div>
+                <div class="massa">174.97</div>
+                <div class="simbolo">Lu</div>
+                <div class="nome">Lutécio</div>
+            </td>
+            <td colspan="4" class="nada"></td>
+        </tr>
+
+        <tr>
+            <td colspan="18" style="text-align: center; border: none; height: 30px;">
+                <div class="natomico">Actinídeos</div>
+            </td>
+        </tr>
+        <tr>
+            <td class="element actinideos" onclick="window.open('https://pt.wikipedia.org/wiki/T%C3%B3rio', '_blank')">
+                <div class="natomico">90</div>
+                <div class="massa">232.04</div>
+                <div class="simbolo">Th</div>
+                <div class="nome">Tório</div>
+            </td>
+            <td class="element actinideos"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Protact%C3%ADnio', '_blank')">
+                <div class="natomico">91</div>
+                <div class="massa">231.04</div>
+                <div class="simbolo">Pa</div>
+                <div class="nome">Protactínio</div>
+            </td>
+            <td class="element actinideos" onclick="window.open('https://pt.wikipedia.org/wiki/Ur%C3%A2nio', '_blank')">
+                <div class="natomico">92</div>
+                <div class="massa">238.03</div>
+                <div class="simbolo">U</div>
+                <div class="nome">Urânio</div>
+            </td>
+            <td class="element actinideos"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Net%C3%BAnio', '_blank')">
+                <div class="natomico">93</div>
+                <div class="massa">[237]</div>
+                <div class="simbolo">Np</div>
+                <div class="nome">Netúnio</div>
+            </td>
+            <td class="element actinideos"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Plut%C3%B4nio', '_blank')">
+                <div class="natomico">94</div>
+                <div class="massa">[244]</div>
+                <div class="simbolo">Pu</div>
+                <div class="nome">Plutônio</div>
+            </td>
+            <td class="element actinideos"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Amer%C3%ADcio', '_blank')">
+                <div class="natomico">95</div>
+                <div class="massa">[243]</div>
+                <div class="simbolo">Am</div>
+                <div class="nome">Amerício</div>
+            </td>
+            <td class="element actinideos" onclick="window.open('https://pt.wikipedia.org/wiki/C%C3%BArio', '_blank')">
+                <div class="natomico">96</div>
+                <div class="massa">[247]</div>
+                <div class="simbolo">Cm</div>
+                <div class="nome">Cúrio</div>
+            </td>
+            <td class="element actinideos"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Berqu%C3%A9lio', '_blank')">
+                <div class="natomico">97</div>
+                <div class="massa">[247]</div>
+                <div class="simbolo">Bk</div>
+                <div class="nome">Berquélio</div>
+            </td>
+            <td class="element actinideos"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Calif%C3%B3rnio', '_blank')">
+                <div class="natomico">98</div>
+                <div class="massa">[251]</div>
+                <div class="simbolo">Cf</div>
+                <div class="nome">Califórnio</div>
+            </td>
+            <td class="element actinideos"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Einst%C3%AAnio', '_blank')">
+                <div class="natomico">99</div>
+                <div class="massa">[252]</div>
+                <div class="simbolo">Es</div>
+                <div class="nome">Einstênio</div>
+            </td>
+            <td class="element actinideos" onclick="window.open('https://pt.wikipedia.org/wiki/F%C3%A9rmio', '_blank')">
+                <div class="natomico">100</div>
+                <div class="massa">[257]</div>
+                <div class="simbolo">Fm</div>
+                <div class="nome">Férmio</div>
+            </td>
+            <td class="element actinideos"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Mendel%C3%A9vio', '_blank')">
+                <div class="natomico">101</div>
+                <div class="massa">[258]</div>
+                <div class="simbolo">Md</div>
+                <div class="nome">Mendelévio</div>
+            </td>
+            <td class="element actinideos"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Nob%C3%A9lio', '_blank')">
+                <div class="natomico">102</div>
+                <div class="massa">[259]</div>
+                <div class="simbolo">No</div>
+                <div class="nome">Nobélio</div>
+            </td>
+            <td class="element actinideos"
+                onclick="window.open('https://pt.wikipedia.org/wiki/Laur%C3%AAncio', '_blank')">
+                <div class="natomico">103</div>
+                <div class="massa">[262]</div>
+                <div class="simbolo">Lr</div>
+                <div class="nome">Laurêncio</div>
+            </td>
+            <td colspan="4" class="nada"></td>
+        </tr>
+    </table>
+</body>
+
+</html>
